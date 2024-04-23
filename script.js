@@ -1,11 +1,12 @@
 //your code here!
 document.addEventListener("DOMContentLoaded", function() {
- list = document.getElementById("myList");
+    const list = document.getElementById("infi-list");
     for (let i = 1; i <= 10; i++) {
         const listItem = document.createElement("li");
         listItem.textContent = "List Item " + i;
         list.appendChild(listItem);
     }
+
     function addMoreItems() {
         const items = list.querySelectorAll("li");
         const lastItem = items[items.length - 1];
@@ -18,6 +19,8 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
     }
+
     window.addEventListener("scroll", addMoreItems);
 });
+
 
